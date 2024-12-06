@@ -81,11 +81,6 @@ export const Bingo = () => {
         if (!board.length) initializeBoard();
     }, [board, initializeBoard]);
 
-    useEffect(() => {
-        console.log(`%c Selected Square Update`, 'color: orange', {selectedSquares});
-    },
-    [selectedSquares]);
-
     const onClick = (index: number) => {
         if (isSelected(index)) removeSelectedSquares(index);
         else setSelectedSquares(index);

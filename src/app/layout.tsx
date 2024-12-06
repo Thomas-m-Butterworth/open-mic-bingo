@@ -47,7 +47,17 @@ export const metadata: Metadata = {
         alt: "(No) Money in the Bank logo"
       }
     ]
-  }
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Open Mic Bingo",
+    description: "A silly game of bingo based on open mic comedy sets - (No) Money in the Bank.",
+    creator: '(No) Money in the Bank',
+    images: {
+      url: '/og-image.png',
+      alt: "(No) Money in the Bank logo"
+    },
+  },
 };
 
 export default function RootLayout({
