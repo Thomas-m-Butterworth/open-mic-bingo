@@ -31,6 +31,9 @@ const urbanist = localFont({
 export const metadata: Metadata = {
   title: "Open Mic Bingo",
   description: "A silly game of bingo based on open mic comedy sets by (No) Money in the Bank.",
+  icons: {
+    icon: '/icon.png',
+  },
 };
 
 export default function RootLayout({
