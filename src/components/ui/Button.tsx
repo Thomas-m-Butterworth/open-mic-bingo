@@ -12,6 +12,7 @@ export const Button = styled.button`
         border: solid 2px var(--scratch-pink);
         background-color: var(--foreground);
         color: var(--background);
+        cursor: pointer;
     }
     &:focus {
         border: solid 2px var(--foreground);
@@ -23,5 +24,10 @@ export const Button = styled.button`
         background-color: var(--foreground);
         color: var(--background);
     }
-    &:disabled {}
+    &:disabled {
+        border: solid 2px var(--foreground);
+        background-color: var(--disabled);
+        color: var(--background);
+        cursor: not-allowed;
+    }
 `

@@ -122,7 +122,12 @@ export const Bingo = () => {
             </BingoWin>
         <Controls>
             <Button onClick={resetBoard}>Reset Board</Button>
-            <Button onClick={resetSelectedSquares}>Reset Selections</Button>
+            <Button
+                onClick={resetSelectedSquares}
+                disabled={!selectedSquares.length}
+                >
+                    Reset Selections
+            </Button>
         </Controls>
 
         {/* <h3>Debugging</h3>
