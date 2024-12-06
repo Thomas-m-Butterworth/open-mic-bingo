@@ -16,8 +16,8 @@ const slideDown = keyframes`
 `;
 
 const BingoWin = styled.div<{$isWinner: boolean}>`
-  padding: 5px;
   max-height: ${(props) => (props.$isWinner ? "100px" : "0")};
+  padding: 2px;
   width: 100%;
   overflow: hidden;
   transition: max-height 0.5s ease-in-out;

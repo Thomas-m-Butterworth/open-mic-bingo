@@ -12,29 +12,19 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
-const antonSC = localFont({
-  src: "./fonts/AntonSC-Regular.ttf",
-  variable: "--font-anton-sc",
-  weight: "100 900",
-});
-const chicle = localFont({
-  src: "./fonts/Chicle-Regular.ttf",
-  variable: "--font-chicle",
-  weight: "400",
-});
 const bahiamita = localFont({
   src: "./fonts/Bahianita-Regular.ttf",
   variable: "--title-font",
   weight: "400",
 });
-const milonga = localFont({
-  src: "./fonts/Milonga-Regular.ttf",
-  variable: "--font-milonga",
-  weight: "400",
-});
 const specialElite = localFont({
   src: "./fonts/SpecialElite-Regular.ttf",
   variable: "--body-font",
+  weight: "400",
+});
+const urbanist = localFont({
+  src: "./fonts/Urbanist-SemiBold.ttf",
+  variable: "--button-font",
   weight: "400",
 });
 
@@ -50,7 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${specialElite.variable} ${milonga.variable} ${bahiamita.variable} ${chicle.variable} ${antonSC.variable} ${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${urbanist.variable} ${specialElite.variable} ${bahiamita.variable} ${geistSans.variable} ${geistMono.variable}`}>
         {children}
       </body>
     </html>
