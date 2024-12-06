@@ -30,10 +30,24 @@ const urbanist = localFont({
 
 export const metadata: Metadata = {
   title: "Open Mic Bingo",
-  description: "A silly game of bingo based on open mic comedy sets by (No) Money in the Bank.",
+  description: "A silly game of bingo based on open mic comedy sets - (No) Money in the Bank.",
   icons: {
     icon: '/icon.png',
   },
+  openGraph: {
+    title: "Open Mic Bingo",
+    description: "A silly game of bingo based on open mic comedy sets - (No) Money in the Bank.",
+    url: "https://nomoneyinthebank.com",
+    siteName: "(No) Money in the Bank",
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: "(No) Money in the Bank logo"
+      }
+    ]
+  }
 };
 
 export default function RootLayout({
