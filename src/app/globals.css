@@ -1,12 +1,15 @@
 :root {
-  --background: #ffffff;
+  --background: #f0f0f0;
   --foreground: #171717;
+  --scratch-red: #ff0000;
+  --scratch-yellow: #ffdb00;
+  --scratch-pink: #ff93e1;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #f0f0f0;
   }
 }
 
@@ -19,7 +22,7 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--body-font), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
