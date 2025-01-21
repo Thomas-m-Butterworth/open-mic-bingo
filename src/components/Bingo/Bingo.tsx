@@ -1,6 +1,11 @@
 "use-case";
 import { winningCombos } from "@/data/games";
-import { BingoContainer, BingoGrid, BingoSquare, BingoText } from "./Bingo.styled";
+import {
+  BingoContainer,
+  BingoGrid,
+  BingoSquare,
+  BingoText,
+} from "./Bingo.styled";
 import { useBingoStore } from "@/store/bingoStore";
 import { useEffect } from "react";
 import styled, { keyframes } from "styled-components";
@@ -15,7 +20,7 @@ const slideDown = keyframes`
   }
 `;
 
-const BingoWin = styled.div<{$isWinner: boolean}>`
+const BingoWin = styled.div<{ $isWinner: boolean }>`
   max-height: ${(props) => (props.$isWinner ? "100px" : "0")};
   padding: 2px;
   width: 100%;
@@ -58,80 +63,67 @@ const BingoWinTitle = styled.h2`
   }
 `;
 
-
 const Controls = styled.div`
-    display: flex;
-    flex-direction: row;
-    padding: 8px;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  padding: 8px;
+  justify-content: space-between;
 `;
 
 export const Bingo = () => {
-    const {
-        board,
-        resetBoard,
-        selectedSquares,
-        setSelectedSquares,
-        removeSelectedSquares,
-        resetSelectedSquares,
-        initializeBoard
-    } = useBingoStore()
+  const {
+    board,
+    resetBoard,
+    selectedSquares,
+    setSelectedSquares,
+    removeSelectedSquares,
+    resetSelectedSquares,
+    initializeBoard,
+  } = useBingoStore();
 
-    useEffect(() => {
-        if (!board.length) initializeBoard();
-    }, [board, initializeBoard]);
+  useEffect(() => {
+    if (!board.length) initializeBoard();
+  }, [board, initializeBoard]);
 
-    const onClick = (index: number) => {
-        if (isSelected(index)) removeSelectedSquares(index);
-        else setSelectedSquares(index);
-    }
+  const onClick = (index: number) => {
+    if (isSelected(index)) removeSelectedSquares(index);
+    else setSelectedSquares(index);
+  };
 
-    const isSelected = (index: number): boolean => {
-        return selectedSquares.includes(index)
-    };
+  const isSelected = (index: number): boolean => {
+    return selectedSquares.includes(index);
+  };
 
-    const isWinner = winningCombos.some(combo => 
-            combo.every(index => selectedSquares.includes(index))
-          );
+  const isWinner = winningCombos.some((combo) =>
+    combo.every((index) => selectedSquares.includes(index))
+  );
 
-    return (
-        <BingoContainer>
-        <BingoGrid>
+  return (
+    <BingoContainer>
+      <BingoGrid>
         {board.map((square, index) => (
-            <BingoSquare
-                key={`square-${index}`}
-                onClick={() => onClick(index)}
-                $isSelected={isSelected(index)}
-            >
-              <BingoText>
-                {square.quote}
-              </BingoText>
-            </BingoSquare>
-          ))}
-        </BingoGrid>
-        
-        <BingoWin $isWinner={isWinner}>
-        {isWinner && (
-                <BingoWinTitle data-text="Bingo!">Bingo!</BingoWinTitle>
-            )}
-            </BingoWin>
-        <Controls>
-            <Button onClick={resetBoard}>Reset Board</Button>
-            <Button
-                onClick={resetSelectedSquares}
-                disabled={!selectedSquares.length}
-                >
-                    Reset Selections
-            </Button>
-        </Controls>
-
-        {/* <h3>Debugging</h3>
-        <h4>Selected Squares</h4>
-        <div style={{display: 'flex', flexDirection: 'row'}}>
-        {selectedSquares.map((s, index) => (
-            <p style={{marginLeft: '3px'}} key={index}>{s}</p>
+          <BingoSquare
+            key={`square-${index}`}
+            onClick={() => onClick(index)}
+            $isSelected={isSelected(index)}
+          >
+            <BingoText>{square.quote}</BingoText>
+          </BingoSquare>
         ))}
-        </div> */}
-      </BingoContainer>
-    )
+      </BingoGrid>
+
+      <BingoWin $isWinner={isWinner}>
+        {isWinner && <BingoWinTitle data-text="Bingo!">Bingo!</BingoWinTitle>}
+      </BingoWin>
+      <Controls>
+        <Button onClick={resetBoard}>Reset Board</Button>
+        <Button
+          onClick={resetSelectedSquares}
+          disabled={!selectedSquares.length}
+        >
+          Reset Selections
+        </Button>
+      </Controls>
+    </BingoContainer>
+  );
 };

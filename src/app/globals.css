@@ -1,15 +1,21 @@
 :root {
   --background: #0a0a0a;
   --foreground: #f0f0f0;
+  --disabled: #d3d3d3;
   --scratch-red: #ff0000;
   --scratch-yellow: #ffdb00;
   --scratch-pink: #ff93e1;
-  --disabled: #d3d3d3;
+
+  --sfc-black: #000000;
+  --sfc-deep-purple: #441c5b;
+  --sfc-med-purple: #663a79;
+  --sfc-light-purple: #a88fac;
+  --sfc-white: #ffffff;
 }
 
 html,
 body {
-  max-width: 100vw;
+  width: 100%;
   overflow-x: hidden;
 }
 

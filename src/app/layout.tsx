@@ -67,7 +67,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${urbanist.variable} ${specialElite.variable} ${bahiamita.variable} ${geistSans.variable} ${geistMono.variable}`}>
+      <body
+        className={`${urbanist.variable} ${specialElite.variable} ${bahiamita.variable} ${geistSans.variable} ${geistMono.variable}`}
+        suppressHydrationWarning={true}
+        >
         {children}
       </body>
     </html>
