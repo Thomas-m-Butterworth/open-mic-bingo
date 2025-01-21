@@ -1,1 +1,2 @@
-export * from './arrayFunctions';
+export * from "./arrayFunctions";
+export * from "./getNightTheme";

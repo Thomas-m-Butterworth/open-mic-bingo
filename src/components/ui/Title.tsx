@@ -1,4 +1,4 @@
-import { NightTheme, NightType } from "@/app/page";
+import { NightTheme, NightType } from "@/utils";
 import Image from "next/image";
 import styled from "styled-components";
 

@@ -1,1 +1,2 @@
-export * from './Bingo';
+export * from "./Bingo";
+export * from "./ui";
