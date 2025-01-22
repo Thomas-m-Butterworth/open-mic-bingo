@@ -30,7 +30,7 @@ const BingoWin = styled.div<{ $isWinner: boolean }>`
 
 const BingoWinTitle = styled.h2`
   position: relative;
-  color: var(--scratch-pink);
+  color: ${({ theme }) => theme.colours.headerText};
   font-family: var(--title-font);
   font-size: 2.5rem;
   letter-spacing: 1px;
@@ -41,7 +41,7 @@ const BingoWinTitle = styled.h2`
   &::before {
     content: attr(data-text);
     color: transparent;
-    -webkit-text-stroke: 4px var(--background);
+    -webkit-text-stroke: 4px #000;
     position: absolute;
     top: 0;
     left: 0;
@@ -53,7 +53,7 @@ const BingoWinTitle = styled.h2`
   &::after {
     content: attr(data-text);
     color: transparent;
-    -webkit-text-stroke: 6px var(--scratch-yellow);
+    -webkit-text-stroke: 6px ${({ theme }) => theme.colours.headerStroke};
     position: absolute;
     top: 0;
     left: 0;

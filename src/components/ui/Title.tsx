@@ -40,7 +40,7 @@ export const TitleText = styled.h1<{ night: NightType }>`
     right: 0;
     bottom: 0;
     color: transparent;
-    -webkit-text-stroke: 4px var(--background);
+    -webkit-text-stroke: 4px #000;
     z-index: -1;
   }
 
