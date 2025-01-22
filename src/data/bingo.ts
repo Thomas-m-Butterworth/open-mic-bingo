@@ -138,6 +138,58 @@ export const bingo: BingoType[] = [
     quote: `Billy shouts at someone`,
   },
   {
+    night: ["sfc"],
+    quote: `Billy tries to make the audience woof`,
+  },
+  {
+    night: ["sfc"],
+    quote: `Act looks uncomfortable`,
+  },
+  {
+    night: ["sfc", "scratch"],
+    quote: `Dick  joke`,
+  },
+  {
+    night: ["sfc", "scratch"],
+    quote: `Act laughs nervously`,
+  },
+  {
+    night: ["sfc"],
+    quote: `Harry's signature "oooOOOOoOoooOOO"`,
+  },
+  {
+    night: ["sfc"],
+    quote: `Tarra, tarra`,
+  },
+  {
+    night: ["sfc"],
+    quote: `"Who wants to play a game?"`,
+  },
+  {
+    night: ["sfc"],
+    quote: `Billy tries to make the audience woof`,
+  },
+  {
+    night: ["sfc", "scratch"],
+    quote: `"Am I right?"`,
+  },
+  {
+    night: ["sfc"],
+    quote: `Maxine Wade's laugh`,
+  },
+  {
+    night: ["sfc"],
+    quote: `(No) Money in the Bank shout out`,
+  },
+  {
+    night: ["sfc", "scratch"],
+    quote: `Balthazar Dark's joke doesn't land (he looks sad)`,
+  },
+  {
+    night: ["sfc", "scratch"],
+    quote: `"Give it up for all the acts you've seen tonight"`,
+  },
+  {
     night: ["sfc", "scratch"],
     quote: `Break is longer than they said`,
   },
