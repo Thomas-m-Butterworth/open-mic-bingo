@@ -155,7 +155,7 @@ export const bingo: BingoType[] = [
   },
   {
     night: ["sfc"],
-    quote: `Harry's signature "oooOOOOoOoooOOO"`,
+    quote: `Harry's signature "ooOOOoOO"`,
   },
   {
     night: ["sfc"],
