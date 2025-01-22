@@ -1,3 +1,4 @@
+import { useBingoStore } from "@/store/bingoStore";
 import { NightTheme, NightType } from "@/utils";
 import Image from "next/image";
 import styled from "styled-components";
@@ -64,7 +65,8 @@ export interface TitleProps {
   night: NightTheme;
 }
 
-export const Title = ({ night }: TitleProps) => {
+export const Title = () => {
+  const { night } = useBingoStore();
   return (
     <TitleContainer>
       <Image
