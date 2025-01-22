@@ -4,11 +4,11 @@ import { useSearchParams } from "next/navigation";
 import { Bingo } from "@/components";
 import { LoadingSpinner, PageContainer } from "@/components/ui";
 import { Title } from "@/components/ui/Title";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { nightMap, NightTheme, NightType } from "@/utils";
 import { useBingoStore } from "@/store/bingoStore";
 import { ThemeProvider } from "styled-components";
-import { GlobalStyles } from "@/app/GlobalStyles"; // Adjust path if needed
+import { GlobalStyles } from "@/app/GlobalStyles";
 
 const ThemedPage: React.FC<{
   theme: NightTheme;
@@ -27,24 +27,18 @@ const BingoGame: React.FC = () => (
   </>
 );
 
-const useNightTheme = (): NightTheme => {
+const GameContent = () => {
   const searchParams = useSearchParams();
   const nightId = searchParams.get("night") as NightType;
   const night: NightTheme = nightMap[nightId] || nightMap["scratch"];
   const { night: storedNight, setNight } = useBingoStore();
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     if (night.night !== storedNight.night) {
       setNight(night);
     }
   }, [night, setNight, storedNight]);
-
-  return night;
-};
-
-const Home: React.FC = () => {
-  const night = useNightTheme();
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const timeout = setTimeout(() => setIsLoading(false), 800);
@@ -57,5 +51,11 @@ const Home: React.FC = () => {
     </ThemedPage>
   );
 };
+
+const Home: React.FC = () => (
+  <Suspense fallback={<LoadingSpinner />}>
+    <GameContent />
+  </Suspense>
+);
 
 export default Home;

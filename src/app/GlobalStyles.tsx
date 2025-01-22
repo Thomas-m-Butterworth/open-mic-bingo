@@ -1,4 +1,3 @@
-import { getNightTheme } from "@/utils";
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
