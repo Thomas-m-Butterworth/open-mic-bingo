@@ -4,26 +4,33 @@ import { useSearchParams } from "next/navigation";
 import { Bingo } from "@/components";
 import { LoadingSpinner, PageContainer } from "@/components/ui";
 import { Title } from "@/components/ui/Title";
-import { useEffect, useState, Suspense } from "react";
+import { useEffect, useState } from "react";
 import { nightMap, NightTheme, NightType } from "@/utils";
 import { useBingoStore } from "@/store/bingoStore";
+import { ThemeProvider } from "styled-components";
+import { GlobalStyles } from "@/app/GlobalStyles"; // Adjust path if needed
 
-export default function Home() {
-  const searchParamsSuspense = (
-    <Suspense fallback={<LoadingSpinner />}>
-      <SearchParams />
-    </Suspense>
-  );
+const ThemedPage: React.FC<{
+  theme: NightTheme;
+  children: React.ReactNode;
+}> = ({ theme, children }) => (
+  <ThemeProvider theme={theme}>
+    <GlobalStyles />
+    <PageContainer>{children}</PageContainer>
+  </ThemeProvider>
+);
 
-  return <PageContainer>{searchParamsSuspense}</PageContainer>;
-}
+const BingoGame: React.FC = () => (
+  <>
+    <Title />
+    <Bingo />
+  </>
+);
 
-function SearchParams() {
+const useNightTheme = (): NightTheme => {
   const searchParams = useSearchParams();
   const nightId = searchParams.get("night") as NightType;
   const night: NightTheme = nightMap[nightId] || nightMap["scratch"];
-
-  const [isLoading, setIsLoading] = useState(true);
   const { night: storedNight, setNight } = useBingoStore();
 
   useEffect(() => {
@@ -32,23 +39,23 @@ function SearchParams() {
     }
   }, [night, setNight, storedNight]);
 
+  return night;
+};
+
+const Home: React.FC = () => {
+  const night = useNightTheme();
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     const timeout = setTimeout(() => setIsLoading(false), 800);
     return () => clearTimeout(timeout);
   }, []);
 
-  if (isLoading) {
-    return (
-      <PageContainer>
-        <LoadingSpinner />
-      </PageContainer>
-    );
-  }
-
   return (
-    <PageContainer>
-      <Title />
-      <Bingo />
-    </PageContainer>
+    <ThemedPage theme={night}>
+      {isLoading ? <LoadingSpinner /> : <BingoGame />}
+    </ThemedPage>
   );
-}
+};
+
+export default Home;

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -30,32 +29,35 @@ const urbanist = localFont({
 
 export const metadata: Metadata = {
   title: "Open Mic Bingo",
-  description: "A silly game of bingo based on open mic comedy sets - (No) Money in the Bank.",
+  description:
+    "A silly game of bingo based on open mic comedy sets - (No) Money in the Bank.",
   icons: {
-    icon: '/icon.png',
+    icon: "/icon.png",
   },
   openGraph: {
     title: "Open Mic Bingo",
-    description: "A silly game of bingo based on open mic comedy sets - (No) Money in the Bank.",
+    description:
+      "A silly game of bingo based on open mic comedy sets - (No) Money in the Bank.",
     url: "https://nomoneyinthebank.com",
     siteName: "(No) Money in the Bank",
     images: [
       {
-        url: '/og-image.png',
+        url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "(No) Money in the Bank logo"
-      }
-    ]
+        alt: "(No) Money in the Bank logo",
+      },
+    ],
   },
   twitter: {
-    card: 'summary_large_image',
+    card: "summary_large_image",
     title: "Open Mic Bingo",
-    description: "A silly game of bingo based on open mic comedy sets - (No) Money in the Bank.",
-    creator: '(No) Money in the Bank',
+    description:
+      "A silly game of bingo based on open mic comedy sets - (No) Money in the Bank.",
+    creator: "(No) Money in the Bank",
     images: {
-      url: '/og-image.png',
-      alt: "(No) Money in the Bank logo"
+      url: "/og-image.png",
+      alt: "(No) Money in the Bank logo",
     },
   },
 };
@@ -70,7 +72,7 @@ export default function RootLayout({
       <body
         className={`${urbanist.variable} ${specialElite.variable} ${bahiamita.variable} ${geistSans.variable} ${geistMono.variable}`}
         suppressHydrationWarning={true}
-        >
+      >
         {children}
       </body>
     </html>
