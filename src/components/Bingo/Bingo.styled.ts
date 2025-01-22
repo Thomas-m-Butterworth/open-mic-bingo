@@ -14,8 +14,10 @@ export const BingoGrid = styled.div`
 `;
 
 export const BingoSquare = styled.div<{ $isSelected: boolean }>`
-  background-color: ${(props) => (props.$isSelected ? "#ff93e1" : "#f0f0f0")};
-  color: #000000;
+  background-color: ${({ theme, $isSelected }) =>
+    $isSelected ? theme.colours.bingoSelect : theme.colours.bingoBg};
+  color: ${({ theme, $isSelected }) =>
+    $isSelected ? theme.colours.bingoBg : theme.colours.text};
   border-radius: 8px;
   padding: 3px 5px;
   cursor: pointer;

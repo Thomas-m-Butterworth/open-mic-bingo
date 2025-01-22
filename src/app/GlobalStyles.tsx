@@ -1,13 +1,17 @@
+import { getNightTheme } from "@/utils";
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
   :root {
-    --background: #0a0a0a;
+    --background: ${({ theme }) => theme.colours.bg};
     --foreground: #f0f0f0;
     --disabled: #d3d3d3;
+
+    --scratch-black: #000000;
     --scratch-red: #ff0000;
     --scratch-yellow: #ffdb00;
     --scratch-pink: #ff93e1;
+    --scratch-white: #ffffff;
 
     --sfc-black: #000000;
     --sfc-deep-purple: #441c5b;
