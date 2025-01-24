@@ -25,7 +25,7 @@ export const nightMap: NightMapType = {
   scratch: {
     night: "scratch",
     title: "OPEN MIC BINGO",
-    img: "/images/scratch-logo.png",
+    img: "/images/scratch-logo.svg",
     colours: {
       bg: "var(--scratch-black)",
       text: "var(--scratch-black)",
@@ -41,7 +41,7 @@ export const nightMap: NightMapType = {
   sfc: {
     night: "sfc",
     title: "FRUITY DOG BINGO",
-    img: "/images/sfc-logo.png",
+    img: "/images/sfc-logo.svg",
     colours: {
       bg: "var(--sfc-deep-purple)",
       text: "var(--sfc-black)",

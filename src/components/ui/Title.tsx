@@ -16,7 +16,7 @@ export const TitleContainer = styled.div`
   margin-top: 16px;
   margin-bottom: 8px;
   width: 320px;
-  height: 160px;
+  height: 180px;
 `;
 
 export const TitleText = styled.h1<{ night: NightType }>`
@@ -24,10 +24,9 @@ export const TitleText = styled.h1<{ night: NightType }>`
   font-size: 2.5rem;
   letter-spacing: 1.6px;
   position: absolute;
-  bottom: 16px;
+  bottom: ${({ theme }) => (theme.night === "scratch" ? "16px" : 0)};
   background: transparent;
-  color: ${(props) =>
-    props.night == "scratch" ? "var(--scratch-red)" : "var(--scratch-white)"};
+  color: ${({ theme }) => theme.colours.headerText};
   z-index: 0;
   text-align: center;
   width: 100%;
@@ -76,7 +75,6 @@ export const Title = () => {
         placeholder="blur"
         blurDataURL={night.img}
         alt="Logo for Scratch 'n' Sniff open mic comedy"
-        style={{ top: 0, bottom: 0 }}
       />
       <TitleText data-text={night.title} night={night.night}>
         {night.title}

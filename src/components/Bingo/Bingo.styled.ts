@@ -9,7 +9,8 @@ export const BingoContainer = styled.div`
 export const BingoGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin-bottom: 8px;
+  margin-top: 16px;
+  margin-bottom: 24px;
   gap: 2px;
 `;
 
