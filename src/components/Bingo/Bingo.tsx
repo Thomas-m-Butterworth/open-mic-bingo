@@ -21,7 +21,8 @@ const slideDown = keyframes`
 `;
 
 const BingoWin = styled.div<{ $isWinner: boolean }>`
-  max-height: ${(props) => (props.$isWinner ? "100px" : "0")};
+  min-height: 52px;
+  max-height: 100px;
   padding: 2px;
   width: 100%;
   overflow: hidden;
@@ -67,7 +68,7 @@ const Controls = styled.div`
   display: flex;
   flex-direction: row;
   padding: 8px;
-  justify-content: space-between;
+  justify-content: center;
 `;
 
 export const Bingo = () => {

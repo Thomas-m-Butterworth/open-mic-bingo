@@ -27,7 +27,7 @@ export const BingoSquare = styled.div<{ $isSelected: boolean }>`
   transition: all 0.3s ease;
   font-size: 0.7rem;
   line-height: 1.2;
-  max-height: 95px;
+  max-height: 110px;
   display: flex;
   align-items: center;
   justify-content: center;
