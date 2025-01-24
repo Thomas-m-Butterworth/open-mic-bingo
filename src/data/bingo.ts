@@ -102,6 +102,14 @@ export const bingo: BingoType[] = [
     quote: "How much time do I have left?",
   },
   {
+    night: ["scratch"],
+    quote: "Teacher voice",
+  },
+  {
+    night: ["scratch"],
+    quote: `Thom doesn't want to be there`,
+  },
+  {
     night: ["scratch", "sfc"],
     quote: "I'm getting old",
   },
@@ -180,6 +188,14 @@ export const bingo: BingoType[] = [
   {
     night: ["sfc"],
     quote: `(No) Money in the Bank shout out`,
+  },
+  {
+    night: ["sfc"],
+    quote: `Billy says he's allowed to be ableist`,
+  },
+  {
+    night: ["sfc"],
+    quote: `Billy tries to rob an audience member`,
   },
   {
     night: ["sfc", "scratch"],
