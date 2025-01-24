@@ -1,4 +1,4 @@
-export type NightType = "scratch" | "sfc";
+export type NightType = "scratch" | "sfc" | "matesfest";
 
 export interface ThemeColours {
   bg: string;
@@ -20,6 +20,7 @@ export interface NightTheme {
 export type NightMapType = {
   scratch: NightTheme;
   sfc: NightTheme;
+  matesfest: NightTheme;
 };
 export const nightMap: NightMapType = {
   scratch: {
@@ -52,6 +53,22 @@ export const nightMap: NightMapType = {
       bingoBg: "var(--sfc-white)",
       buttonBg: "var(--sfc-med-purple)",
       buttonStroke: "var(--sfc-white)",
+    },
+  },
+  matesfest: {
+    night: "matesfest",
+    title: "ALL DAYER BINGO",
+    img: "/images/mates-logo.svg",
+    colours: {
+      bg: "var(--mates-red)",
+      text: "var(--mates-black)",
+      bingoText: "var(--mates-black)",
+      headerText: "var(--mates-orange)",
+      headerStroke: "var(--mates-white)",
+      bingoSelect: "var(--mates-orange)",
+      bingoBg: "var(--mates-white)",
+      buttonBg: "var(--mates-blue)",
+      buttonStroke: "var(--mates-green)",
     },
   },
 };

@@ -71,8 +71,9 @@ export const Title = () => {
       <Image
         src={night.img}
         width={320}
-        height={139}
+        height={120}
         placeholder="blur"
+        objectFit="fit"
         blurDataURL={night.img}
         alt="Logo for Scratch 'n' Sniff open mic comedy"
       />

@@ -209,4 +209,68 @@ export const bingo: BingoType[] = [
     night: ["sfc", "scratch"],
     quote: `Break is longer than they said`,
   },
+  {
+    night: ["matesfest"],
+    quote: `Shock, awe, and love that you stayed to the end.`,
+  },
+  {
+    night: ["matesfest"],
+    quote: `Man in his 30s in plaid and a dad cap.`,
+  },
+  {
+    night: ["matesfest"],
+    quote: `"Give it up for {band from earlier}!"`,
+  },
+  {
+    night: ["matesfest"],
+    quote: `"Who's excited for {upcoming band}?"`,
+  },
+  {
+    night: ["matesfest"],
+    quote: `"YORKSHIRE! YORKSHIRE! YORKSHIRE!`,
+  },
+  {
+    night: ["matesfest"],
+    quote: `Song about suicide`,
+  },
+  {
+    night: ["matesfest"],
+    quote: `Conga line`,
+  },
+  {
+    night: ["matesfest"],
+    quote: `Circle pit`,
+  },
+  {
+    night: ["matesfest"],
+    quote: `Wall of death`,
+  },
+  {
+    night: ["matesfest"],
+    quote: `Someone thanks Dory on stage`,
+  },
+  {
+    night: ["matesfest"],
+    quote: `Some sort of instrument mishap`,
+  },
+  {
+    night: ["matesfest"],
+    quote: `Stinky riffs`,
+  },
+  {
+    night: ["matesfest"],
+    quote: `Chant`,
+  },
+  {
+    night: ["matesfest"],
+    quote: `Make a new friend`,
+  },
+  {
+    night: ["matesfest"],
+    quote: `Too many pints for 5pm`,
+  },
+  {
+    night: ["matesfest"],
+    quote: `Buy some merch`,
+  },
 ];

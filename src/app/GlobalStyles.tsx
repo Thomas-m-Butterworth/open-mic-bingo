@@ -17,6 +17,13 @@ export const GlobalStyles = createGlobalStyle`
     --sfc-med-purple: #663a79;
     --sfc-light-purple: #a88fac;
     --sfc-white: #ffffff;
+
+    --mates-black: #000000;
+    --mates-red: #e00000;
+    --mates-blue: #1d6aae;
+    --mates-green: #34ce0e;
+    --mates-orange: #ffa900;
+    --mates-white: #fff7e7;
   }
 
   html, body {
