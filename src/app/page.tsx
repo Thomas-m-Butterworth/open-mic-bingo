@@ -1,7 +1,7 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { Bingo } from "@/components";
+import { Bingo, GameControls } from "@/components";
 import { LoadingSpinner, PageContainer } from "@/components/ui";
 import { Title } from "@/components/ui/Title";
 import { Suspense, useEffect, useState } from "react";
@@ -24,6 +24,7 @@ const BingoGame: React.FC = () => (
   <>
     <Title />
     <Bingo />
+    <GameControls />
   </>
 );
 

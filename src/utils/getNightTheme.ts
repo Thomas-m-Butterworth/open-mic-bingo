@@ -11,11 +11,16 @@ export interface ThemeColours {
   buttonBg: string;
   buttonStroke: string;
 }
+export interface ThemeStyles {
+  titleBtm?: string;
+  titleLeft?: string;
+}
 export interface NightTheme {
   night: NightType;
   title: string;
   img: string;
   colours: ThemeColours;
+  styles?: ThemeStyles;
 }
 export type NightMapType = {
   scratch: NightTheme;
@@ -38,6 +43,10 @@ export const nightMap: NightMapType = {
       buttonBg: "var(--scratch-black)",
       buttonStroke: "var(--sfc-white)",
     },
+    styles: {
+      titleBtm: "10px",
+      titleLeft: "0px",
+    },
   },
   sfc: {
     night: "sfc",
@@ -54,6 +63,10 @@ export const nightMap: NightMapType = {
       buttonBg: "var(--sfc-med-purple)",
       buttonStroke: "var(--sfc-white)",
     },
+    styles: {
+      titleBtm: "0px",
+      titleLeft: "0px",
+    },
   },
   matesfest: {
     night: "matesfest",
@@ -69,6 +82,10 @@ export const nightMap: NightMapType = {
       bingoBg: "var(--mates-white)",
       buttonBg: "var(--mates-blue)",
       buttonStroke: "var(--mates-green)",
+    },
+    styles: {
+      titleBtm: "20px",
+      titleLeft: "15px",
     },
   },
 };

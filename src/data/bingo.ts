@@ -151,7 +151,7 @@ export const bingo: BingoType[] = [
   },
   {
     night: ["sfc"],
-    quote: `Act looks uncomfortable`,
+    quote: `Act doesn't look comfortable`,
   },
   {
     night: ["sfc", "scratch"],
@@ -272,5 +272,17 @@ export const bingo: BingoType[] = [
   {
     night: ["matesfest"],
     quote: `Buy some merch`,
+  },
+  {
+    night: ["matesfest"],
+    quote: `Joe Morris shouts megadeth`,
+  },
+  {
+    night: ["matesfest"],
+    quote: `Band memeber gets their top off`,
+  },
+  {
+    night: ["matesfest"],
+    quote: `Something, something, community`,
   },
 ];

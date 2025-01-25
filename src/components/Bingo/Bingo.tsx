@@ -9,7 +9,6 @@ import {
 import { useBingoStore } from "@/store/bingoStore";
 import { useEffect } from "react";
 import styled, { keyframes } from "styled-components";
-import { Button } from "../ui";
 
 const slideDown = keyframes`
   from {
@@ -64,21 +63,12 @@ const BingoWinTitle = styled.h2`
   }
 `;
 
-const Controls = styled.div`
-  display: flex;
-  flex-direction: row;
-  padding: 8px;
-  justify-content: center;
-`;
-
 export const Bingo = () => {
   const {
     board,
-    resetBoard,
     selectedSquares,
     setSelectedSquares,
     removeSelectedSquares,
-    resetSelectedSquares,
     initializeBoard,
   } = useBingoStore();
 
@@ -116,15 +106,6 @@ export const Bingo = () => {
       <BingoWin $isWinner={isWinner}>
         {isWinner && <BingoWinTitle data-text="Bingo!">Bingo!</BingoWinTitle>}
       </BingoWin>
-      <Controls>
-        <Button onClick={resetBoard}>Reset Board</Button>
-        <Button
-          onClick={resetSelectedSquares}
-          disabled={!selectedSquares.length}
-        >
-          Reset Selections
-        </Button>
-      </Controls>
     </BingoContainer>
   );
 };

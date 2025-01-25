@@ -12,7 +12,6 @@ export const TitleContainer = styled.div`
   flex-direction: column;
   align-items: center;
   position: relative;
-  overflow: hidden;
   margin-top: 16px;
   margin-bottom: 8px;
   width: 320px;
@@ -21,10 +20,12 @@ export const TitleContainer = styled.div`
 
 export const TitleText = styled.h1<{ night: NightType }>`
   font-family: var(--title-font);
-  font-size: 2.5rem;
+  font-size: 3rem;
   letter-spacing: 1.6px;
   position: absolute;
-  bottom: ${({ theme }) => (theme.night === "scratch" ? "16px" : 0)};
+  bottom: ${({ theme }) => theme.styles.titleBtm};
+  left: ${({ theme }) => theme.styles.titleLeft};
+
   background: transparent;
   color: ${({ theme }) => theme.colours.headerText};
   z-index: 0;
@@ -39,7 +40,7 @@ export const TitleText = styled.h1<{ night: NightType }>`
     right: 0;
     bottom: 0;
     color: transparent;
-    -webkit-text-stroke: 4px #000;
+    -webkit-text-stroke: 4px ${({ theme }) => theme.colours.text};
     z-index: -1;
   }
 
@@ -51,11 +52,11 @@ export const TitleText = styled.h1<{ night: NightType }>`
     right: 0;
     bottom: 0;
     color: transparent;
-    -webkit-text-stroke: 6px
-      ${(props) =>
-        props.night == "scratch"
-          ? "var(--scratch-yellow)"
-          : "var(--scratch-black)"};
+    -webkit-text-stroke: 6px ${({ theme }) => theme.colours.headerStroke};
+    ${(props) =>
+      props.night == "scratch"
+        ? "var(--scratch-yellow)"
+        : "var(--scratch-black)"};
     z-index: -2;
   }
 `;

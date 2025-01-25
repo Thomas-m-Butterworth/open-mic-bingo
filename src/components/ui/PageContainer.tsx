@@ -9,5 +9,6 @@ export const PageContainer = styled.div`
   padding: 0;
   overflow: hidden;
   box-sizing: border-box;
+  justify-content: space-between;
   background: var(--background);
 `;
