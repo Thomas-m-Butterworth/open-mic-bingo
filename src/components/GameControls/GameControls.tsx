@@ -9,7 +9,7 @@ const Controls = styled.div`
   flex-direction: row;
   padding: 8px;
   justify-content: center;
-  margin-bottom: 24px;
+  margin-bottom: 8px;
 `;
 
 export const GameControls = () => {

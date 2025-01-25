@@ -1,7 +1,7 @@
 import styled from "styled-components";
 export const PageContainer = styled.div`
   display: flex;
-  height: 100vh;
+  height: 100svh;
   width: 100vw;
   flex-direction: column;
   align-items: center;
