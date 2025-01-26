@@ -71,15 +71,15 @@ export const Title = () => {
     <TitleContainer>
       <Image
         src={night.img}
-        width={320}
-        height={120}
+        width={320} // full 1600
+        height={120} // full 600
         placeholder="blur"
         objectFit="fit"
         blurDataURL={night.img}
         alt="Logo for Scratch 'n' Sniff open mic comedy"
       />
-      <TitleText data-text={night.title} night={night.night}>
-        {night.title}
+      <TitleText data-text={night.title.toUpperCase()} night={night.night}>
+        {night.title.toUpperCase()}
       </TitleText>
     </TitleContainer>
   );

@@ -30,14 +30,14 @@ const urbanist = localFont({
 export const metadata: Metadata = {
   title: "Open Mic Bingo",
   description:
-    "A silly game of bingo based on open mic comedy sets - (No) Money in the Bank.",
+    "A silly bit of bingo for any event you (No) Money in the Bank have aligned themselves with.",
   icons: {
     icon: "/icon.png",
   },
   openGraph: {
-    title: "Open Mic Bingo",
+    title: "(No) Money in the Bank Bingo",
     description:
-      "A silly game of bingo based on open mic comedy sets - (No) Money in the Bank.",
+      "A silly bit of bingo for any event you (No) Money in the Bank have aligned themselves with.",
     url: "https://nomoneyinthebank.com",
     siteName: "(No) Money in the Bank",
     images: [
@@ -51,9 +51,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Open Mic Bingo",
+    title: "(No) Money in the Bank Bingo",
     description:
-      "A silly game of bingo based on open mic comedy sets - (No) Money in the Bank.",
+      "A silly bit of bingo for any event you (No) Money in the Bank have aligned themselves with.",
     creator: "(No) Money in the Bank",
     images: {
       url: "/og-image.png",

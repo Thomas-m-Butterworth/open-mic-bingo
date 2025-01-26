@@ -15,12 +15,19 @@ export interface ThemeStyles {
   titleBtm?: string;
   titleLeft?: string;
 }
+
+export interface Promoter {
+  name: string;
+  night: string;
+  website: string;
+}
 export interface NightTheme {
   night: NightType;
   title: string;
   img: string;
+  promoter: Promoter;
   colours: ThemeColours;
-  styles?: ThemeStyles;
+  styles: ThemeStyles;
 }
 export type NightMapType = {
   scratch: NightTheme;
@@ -30,8 +37,13 @@ export type NightMapType = {
 export const nightMap: NightMapType = {
   scratch: {
     night: "scratch",
-    title: "OPEN MIC BINGO",
-    img: "/images/scratch-logo.svg",
+    title: "Open Mic Bingo",
+    img: "/images/scratch/scratch-logo.svg",
+    promoter: {
+      name: "(No) Money in the Bank",
+      night: "Scratch 'n' Sniff",
+      website: "https://nomoneyinthebank.com",
+    },
     colours: {
       bg: "var(--scratch-black)",
       text: "var(--scratch-black)",
@@ -50,8 +62,13 @@ export const nightMap: NightMapType = {
   },
   sfc: {
     night: "sfc",
-    title: "FRUITY DOG BINGO",
-    img: "/images/sfc-logo.svg",
+    title: "Fruity Dog Bingo",
+    promoter: {
+      name: "Short For Change",
+      night: "Fruity Dog",
+      website: "https://instagram.com/shortforchange",
+    },
+    img: "/images/sfc/sfc-logo.svg",
     colours: {
       bg: "var(--sfc-deep-purple)",
       text: "var(--sfc-black)",
@@ -70,8 +87,13 @@ export const nightMap: NightMapType = {
   },
   matesfest: {
     night: "matesfest",
-    title: "ALL DAYER BINGO",
-    img: "/images/mates-logo.svg",
+    title: "All Dayer Bingo",
+    promoter: {
+      name: "(No) Money in the Bank",
+      night: "Mates Fest",
+      website: "https://nomoneyinthebank.com",
+    },
+    img: "/images/matesfest/mates-logo.svg",
     colours: {
       bg: "var(--mates-red)",
       text: "var(--mates-black)",

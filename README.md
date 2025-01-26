@@ -11,3 +11,15 @@ The passing a correct night name in the url will return different a bingo game b
 * Scoreboard for speed runners (acts who want to get a full board as fast as possible)
 * Websocket options to play with friends (e.g. everyone's game ends when someone gets a bingo)
 * Ability for nights to add their own bingo options without asking me
+
+## In Progress
+- [ ] Swamp theme
+	- Not yet, but DID add Mates Fest
+- [x] Ensure full screen height (bingo central)
+	- Solved this used `svh` (smallest viewport height)
+- [x] Make all night logo images the same size `320*139`
+	- SVGs with a canvas 5 scale this
+- [x] Separate controls from the board
+- [ ] Generate new metadata in [[Night Themes]]
+- [ ] Improve file structure so that `nightId` can be used to signal a folder.
+	- e.g. `${nightId}/icon.png`
