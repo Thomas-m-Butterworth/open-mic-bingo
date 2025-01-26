@@ -74,7 +74,6 @@ export const Title = () => {
         width={320} // full 1600
         height={120} // full 600
         placeholder="blur"
-        objectFit="fit"
         blurDataURL={night.img}
         alt="Logo for Scratch 'n' Sniff open mic comedy"
       />

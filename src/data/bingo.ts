@@ -285,4 +285,72 @@ export const bingo: BingoType[] = [
     night: ["matesfest"],
     quote: `Something, something, community`,
   },
+  {
+    night: ["scratch", "danpowell"],
+    quote: "Looks sadder than a flat bouncy castle",
+  },
+  {
+    night: ["danpowell"],
+    quote: `Checks his watch`,
+  },
+  {
+    night: ["danpowell"],
+    quote: `Touches his hair`,
+  },
+  {
+    night: ["danpowell"],
+    quote: `Mentions his wonky eye`,
+  },
+  {
+    night: ["danpowell"],
+    quote: `Depression brings him and his wife closer`,
+  },
+  {
+    night: ["danpowell"],
+    quote: `Hypocondria`,
+  },
+  {
+    night: ["danpowell"],
+    quote: `Might be having a panic attack`,
+  },
+  {
+    night: ["danpowell"],
+    quote: `Does more than seven minutes`,
+  },
+  {
+    night: ["danpowell"],
+    quote: `Takes ages to say something`,
+  },
+  {
+    night: ["danpowell"],
+    quote: `Apologisies to the audience`,
+  },
+  {
+    night: ["danpowell"],
+    quote: `Mentions his penis`,
+  },
+  {
+    night: ["danpowell"],
+    quote: `Complains about being old`,
+  },
+  {
+    night: ["danpowell"],
+    quote: `Anger`,
+  },
+  {
+    night: ["danpowell"],
+    quote: `Vasectomy`,
+  },
+  {
+    night: ["danpowell"],
+    quote: `Reading off his notebook`,
+  },
+  {
+    night: ["danpowell"],
+    quote: `He seems suprised he's made you laugh`,
+  },
+  {
+    night: ["danpowell"],
+    quote: `Old man noise whilst moving`,
+  },
 ];

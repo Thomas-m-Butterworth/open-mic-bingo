@@ -1,4 +1,4 @@
-export type NightType = "scratch" | "sfc" | "matesfest";
+export type NightType = "scratch" | "sfc" | "matesfest" | "swamp" | "danpowell";
 
 export interface ThemeColours {
   bg: string;
@@ -33,6 +33,8 @@ export type NightMapType = {
   scratch: NightTheme;
   sfc: NightTheme;
   matesfest: NightTheme;
+  swamp: NightTheme;
+  danpowell: NightTheme;
 };
 export const nightMap: NightMapType = {
   scratch: {
@@ -94,6 +96,56 @@ export const nightMap: NightMapType = {
       website: "https://nomoneyinthebank.com",
     },
     img: "/images/matesfest/mates-logo.svg",
+    colours: {
+      bg: "var(--mates-red)",
+      text: "var(--mates-black)",
+      bingoText: "var(--mates-black)",
+      headerText: "var(--mates-orange)",
+      headerStroke: "var(--mates-white)",
+      bingoSelect: "var(--mates-orange)",
+      bingoBg: "var(--mates-white)",
+      buttonBg: "var(--mates-blue)",
+      buttonStroke: "var(--mates-green)",
+    },
+    styles: {
+      titleBtm: "20px",
+      titleLeft: "15px",
+    },
+  },
+  danpowell: {
+    night: "danpowell",
+    title: "Dan Powell Set Bingo",
+    promoter: {
+      name: "(No) Money in the Bank",
+      night: "Scratch 'n' sniff",
+      website: "https://nomoneyinthebank.com",
+    },
+    img: "/images/danpowell/danpowell-logo.svg",
+    colours: {
+      bg: "var(--danpowell-grey)",
+      text: "var(--danpowell-black)",
+      bingoText: "var(--danpowell-black)",
+      headerText: "var(--danpowell-orange)",
+      headerStroke: "var(--danpowell-yellow)",
+      bingoSelect: "var(--danpowell-orange)",
+      bingoBg: "var(--danpowell-white)",
+      buttonBg: "var(--danpowell-orange)",
+      buttonStroke: "var(--danpowell-yellow)",
+    },
+    styles: {
+      titleBtm: "0px",
+      titleLeft: "0px",
+    },
+  },
+  swamp: {
+    night: "swamp",
+    title: "Open Mic Bingo",
+    promoter: {
+      name: "Phat Baroque",
+      night: "Swamp",
+      website: "https://nomoneyinthebank.com",
+    },
+    img: "/images/swamp/swamp-logo.svg",
     colours: {
       bg: "var(--mates-red)",
       text: "var(--mates-black)",
