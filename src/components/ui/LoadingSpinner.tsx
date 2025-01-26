@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const LoadingSpinner = styled.div`
+export const LoadingSpinner = styled.div<{ $imageSrc?: string }>`
   position: fixed;
   top: 40%;
   width: 150px;
@@ -11,7 +11,8 @@ export const LoadingSpinner = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background-image: url("/icon.png");
+  background-image: ${(props) =>
+    props.$imageSrc ? `url(${props.$imageSrc})` : `url("/icon.png")`};
   background-size: cover;
   background-position: center;
   box-sizing: border-box;

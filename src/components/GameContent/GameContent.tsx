@@ -73,7 +73,11 @@ export const GameContent = () => {
   return (
     <>
       <ThemedPage theme={night}>
-        {isLoading ? <LoadingSpinner /> : <BingoGame />}
+        {isLoading ? (
+          <LoadingSpinner $imageSrc={`/images/${nightId}/icon.png`} />
+        ) : (
+          <BingoGame />
+        )}
       </ThemedPage>
     </>
   );
