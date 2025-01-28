@@ -13,7 +13,8 @@ const Controls = styled.div`
 `;
 
 export const GameControls = () => {
-  const { resetBoard, resetSelectedSquares, selectedSquares } = useBingoStore();
+  const { resetBoard, isResetting, resetSelectedSquares, selectedSquares } =
+    useBingoStore();
   return (
     <>
       <Controls>
@@ -21,6 +22,7 @@ export const GameControls = () => {
           onMouseUp={handleInteractionEnd}
           onTouchEnd={handleInteractionEnd}
           onClick={resetBoard}
+          disabled={isResetting}
         >
           Reset Board
         </Button>

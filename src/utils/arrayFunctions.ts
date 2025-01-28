@@ -1,4 +1,4 @@
-import { BingoType } from "@/store/bingoStore";
+import { BingoType } from "@/store/types";
 import { NightType } from "./getNightTheme";
 
 export const shuffleArr = <T>(array: T[]): T[] =>

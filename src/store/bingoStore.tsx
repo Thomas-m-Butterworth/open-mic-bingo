@@ -1,46 +1,8 @@
-import {
-  nightMap,
-  NightTheme,
-  NightType,
-  parseBingo,
-  shuffleArr,
-} from "@/utils";
+import { nightMap } from "@/utils";
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-
-export interface BingoType {
-  night: NightType[];
-  quote: string;
-}
-
-export interface BingoStore {
-  bingoData: BingoType[];
-  setBingoData: (newBingoData: BingoType[]) => void;
-  board: BingoType[];
-  night: NightTheme;
-  setNight: (night: NightTheme) => void;
-  selectedSquares: number[];
-  setSelectedSquares: (sq: number) => void;
-  removeSelectedSquares: (sq: number) => void;
-  resetSelectedSquares: () => void;
-  resetBoard: () => void;
-  initializeBoard: () => void;
-  bingoLoading: boolean;
-  setBingoLoading: (loading: boolean) => void;
-}
-
-export const handleInitBoard = async (
-  set: (partial: Partial<BingoStore>) => void,
-  get: () => BingoStore
-) => {
-  const { bingoData: bingo, night, resetSelectedSquares } = get();
-  if (!night) return;
-  resetSelectedSquares();
-  const nightBingo = parseBingo(night.night, bingo);
-  const shuffledQuotes = shuffleArr(nightBingo);
-  const trimmedQuotes = shuffledQuotes.slice(0, 16);
-  return set({ board: [...trimmedQuotes] });
-};
+import { BingoStore } from "./types";
+import { handleInitBoard, handleResetAnimation } from "./handlers";
 
 export const useBingoStore = create(
   persist<BingoStore>(
@@ -75,11 +37,23 @@ export const useBingoStore = create(
         }));
       },
       resetBoard: () => {
-        set({ board: [], selectedSquares: [] });
+        handleResetAnimation(set, get);
       },
+      isResetting: false,
+      setIsResetting: (resetting) => set({ isResetting: resetting }),
       initializeBoard: () => handleInitBoard(set, get),
       bingoLoading: false,
       setBingoLoading: (loading) => set({ bingoLoading: loading }),
+      resettingSquares: [],
+      setResettingSquares: (squares) => set({ resettingSquares: squares }),
+      animatingSquares: Array(16).fill(false),
+      setAnimatingSquares: (animating) => set({ animatingSquares: animating }),
+      updateAnimatingSquare: (index, isAnimating) =>
+        set((state) => {
+          const animatingSquares = [...state.animatingSquares];
+          animatingSquares[index] = isAnimating;
+          return { animatingSquares };
+        }),
     }),
     {
       name: "open-mic-bingo-storage",
