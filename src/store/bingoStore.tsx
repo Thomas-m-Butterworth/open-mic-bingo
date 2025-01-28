@@ -25,6 +25,8 @@ export interface BingoStore {
   resetSelectedSquares: () => void;
   resetBoard: () => void;
   initializeBoard: () => void;
+  bingoLoading: boolean;
+  setBingoLoading: (loading: boolean) => void;
 }
 
 export const handleInitBoard = async (
@@ -76,6 +78,8 @@ export const useBingoStore = create(
         set({ board: [], selectedSquares: [] });
       },
       initializeBoard: () => handleInitBoard(set, get),
+      bingoLoading: false,
+      setBingoLoading: (loading) => set({ bingoLoading: loading }),
     }),
     {
       name: "open-mic-bingo-storage",

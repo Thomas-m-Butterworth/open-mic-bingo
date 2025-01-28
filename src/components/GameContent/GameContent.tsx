@@ -56,8 +56,9 @@ export const GameContent = () => {
   const searchParams = useSearchParams();
   const nightId = searchParams.get("night") as NightType;
   const night: NightTheme = getNightTheme(nightId) || getNightTheme("scratch");
-  const { night: storedNight, setNight } = useBingoStore();
-  const [isLoading, setIsLoading] = useState(true);
+  const { night: storedNight, setNight, bingoLoading } = useBingoStore();
+  const [pageLoading, setPageLoading] = useState(true);
+  const isLoading = bingoLoading || pageLoading;
 
   useEffect(() => {
     if (night.night !== storedNight.night) {
@@ -66,9 +67,23 @@ export const GameContent = () => {
   }, [night, setNight, storedNight]);
 
   useEffect(() => {
-    const timeout = setTimeout(() => setIsLoading(false), 1000);
-    return () => clearTimeout(timeout);
-  }, []);
+    const handleInitialLoad = async () => {
+      try {
+        await Promise.all([
+          new Promise((resolve) => {
+            const image = new Image();
+            image.src = `/images/${night.night}/icon.png`;
+            image.onload = resolve;
+            image.onerror = resolve;
+          }),
+        ]);
+      } finally {
+        setPageLoading(false);
+      }
+    };
+
+    handleInitialLoad();
+  }, [night.night]);
 
   return (
     <>

@@ -69,6 +69,7 @@ export const Bingo = () => {
     bingoData,
     setBingoData,
     board,
+    setBingoLoading,
     selectedSquares,
     setSelectedSquares,
     removeSelectedSquares,
@@ -78,13 +79,15 @@ export const Bingo = () => {
   useEffect(() => {
     const fetchData = async () => {
       if (!bingoData.length) {
+        setBingoLoading(true);
         const newBingoData = await fetchBingoData();
         setBingoData(newBingoData);
+        setBingoLoading(false);
       }
     };
 
     fetchData();
-  }, [bingoData.length, setBingoData]);
+  }, [bingoData.length, setBingoData, setBingoLoading]);
 
   useEffect(() => {
     if (!board.length) initializeBoard();
