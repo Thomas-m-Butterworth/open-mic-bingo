@@ -9,6 +9,7 @@ import {
 import { useBingoStore } from "@/store/bingoStore";
 import { useEffect } from "react";
 import styled, { keyframes } from "styled-components";
+import { fetchBingoData } from "@/hooks";
 
 const slideDown = keyframes`
   from {
@@ -65,12 +66,25 @@ const BingoWinTitle = styled.h2`
 
 export const Bingo = () => {
   const {
+    bingoData,
+    setBingoData,
     board,
     selectedSquares,
     setSelectedSquares,
     removeSelectedSquares,
     initializeBoard,
   } = useBingoStore();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      if (!bingoData.length) {
+        const newBingoData = await fetchBingoData();
+        setBingoData(newBingoData);
+      }
+    };
+
+    fetchData();
+  }, [bingoData.length, setBingoData]);
 
   useEffect(() => {
     if (!board.length) initializeBoard();

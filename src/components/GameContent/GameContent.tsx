@@ -66,7 +66,7 @@ export const GameContent = () => {
   }, [night, setNight, storedNight]);
 
   useEffect(() => {
-    const timeout = setTimeout(() => setIsLoading(false), 800);
+    const timeout = setTimeout(() => setIsLoading(false), 1000);
     return () => clearTimeout(timeout);
   }, []);
 

@@ -1,4 +1,3 @@
-import { bingo } from "@/data";
 import {
   nightMap,
   NightTheme,
@@ -15,6 +14,8 @@ export interface BingoType {
 }
 
 export interface BingoStore {
+  bingoData: BingoType[];
+  setBingoData: (newBingoData: BingoType[]) => void;
   board: BingoType[];
   night: NightTheme;
   setNight: (night: NightTheme) => void;
@@ -26,11 +27,11 @@ export interface BingoStore {
   initializeBoard: () => void;
 }
 
-export const handleInitBoard = (
+export const handleInitBoard = async (
   set: (partial: Partial<BingoStore>) => void,
   get: () => BingoStore
 ) => {
-  const { night, resetSelectedSquares } = get();
+  const { bingoData: bingo, night, resetSelectedSquares } = get();
   if (!night) return;
   resetSelectedSquares();
   const nightBingo = parseBingo(night.night, bingo);
@@ -42,6 +43,10 @@ export const handleInitBoard = (
 export const useBingoStore = create(
   persist<BingoStore>(
     (set, get) => ({
+      bingoData: [],
+      setBingoData: (newBingoData) => {
+        set({ bingoData: newBingoData });
+      },
       board: [],
       night: nightMap["scratch"],
       setNight: (night) => {
