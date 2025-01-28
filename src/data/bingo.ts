@@ -10,11 +10,11 @@ export const bingo: BingoType[] = [
     quote: "Men and women are different",
   },
   {
-    night: ["scratch", "sfc"],
+    night: ["scratch", "sfc", "swamp"],
     quote: "Autism",
   },
   {
-    night: ["scratch", "sfc"],
+    night: ["scratch", "sfc", "swamp"],
     quote: "The apps",
   },
   {
@@ -30,11 +30,11 @@ export const bingo: BingoType[] = [
     quote: "Who remembers?",
   },
   {
-    night: ["scratch"],
+    night: ["scratch", "swamp"],
     quote: "First time doing stand-up",
   },
   {
-    night: ["scratch", "sfc"],
+    night: ["scratch", "sfc", "swamp"],
     quote: "People always ask me...",
   },
   {
@@ -42,7 +42,7 @@ export const bingo: BingoType[] = [
     quote: "I know what you're thinking",
   },
   {
-    night: ["scratch"],
+    night: ["scratch", "swamp"],
     quote: "This is new material",
   },
   {
@@ -50,11 +50,11 @@ export const bingo: BingoType[] = [
     quote: "That one deserved more",
   },
   {
-    night: ["scratch", "sfc"],
+    night: ["scratch", "sfc", "swamp"],
     quote: "As you can probably tell, I'm single",
   },
   {
-    night: ["scratch", "sfc"],
+    night: ["scratch", "sfc", "swamp"],
     quote: "From a shit home town",
   },
   {
@@ -78,7 +78,7 @@ export const bingo: BingoType[] = [
     quote: "Pretending the sparse audience is full",
   },
   {
-    night: ["scratch"],
+    night: ["scratch", "swamp"],
     quote: "More comedians than audience",
   },
   {
@@ -90,7 +90,7 @@ export const bingo: BingoType[] = [
     quote: "Pop-culture reference from over a decade ago",
   },
   {
-    night: ["scratch", "sfc"],
+    night: ["scratch", "sfc", "swamp"],
     quote: "Clearly choosing stand-up over therapy",
   },
   {
@@ -118,7 +118,7 @@ export const bingo: BingoType[] = [
     quote: "Gen Z",
   },
   {
-    night: ["scratch", "sfc"],
+    night: ["scratch", "sfc", "swamp"],
     quote: `"This genuinely happened"`,
   },
   {
@@ -154,7 +154,7 @@ export const bingo: BingoType[] = [
     quote: `Act doesn't look comfortable`,
   },
   {
-    night: ["sfc", "scratch"],
+    night: ["sfc", "scratch", "swamp"],
     quote: `Dick  joke`,
   },
   {
@@ -202,7 +202,7 @@ export const bingo: BingoType[] = [
     quote: `Balthazar Dark's joke doesn't land (he looks sad)`,
   },
   {
-    night: ["sfc", "scratch"],
+    night: ["sfc", "scratch", "swamp"],
     quote: `"Give it up for all the acts you've seen tonight"`,
   },
   {
@@ -352,5 +352,73 @@ export const bingo: BingoType[] = [
   {
     night: ["danpowell"],
     quote: `Old man noise whilst moving`,
+  },
+  {
+    night: ["swamp", "scratch"],
+    quote: "Busy at the start, dead by the end",
+  },
+  {
+    night: ["swamp"],
+    quote: "The panel is too nice",
+  },
+  {
+    night: ["swamp"],
+    quote: "The panel is too mean",
+  },
+  {
+    night: ["swamp"],
+    quote: "Character act on panel takes a wild swing",
+  },
+  {
+    night: ["swamp"],
+    quote: "The host complains they're tired",
+  },
+  {
+    night: ["swamp"],
+    quote: "Otley runner",
+  },
+  {
+    night: ["swamp"],
+    quote: "Act ignores the times up whistle",
+  },
+  {
+    night: ["swamp"],
+    quote: "Still going at midnight",
+  },
+  {
+    night: ["swamp"],
+    quote: "More than five show up go up spots",
+  },
+  {
+    night: ["swamp"],
+    quote: "Time to start rushing through the acts",
+  },
+  {
+    night: ["swamp"],
+    quote: "Thank the bar staff",
+  },
+  {
+    night: ["swamp"],
+    quote: "The act is hammered",
+  },
+  {
+    night: ["swamp"],
+    quote: "Crowd work with someone younger than 22",
+  },
+  {
+    night: ["swamp"],
+    quote: "Noise bleed from downstairs",
+  },
+  {
+    night: ["swamp"],
+    quote: "New audience members who just wanted somewhere to sit",
+  },
+  {
+    night: ["swamp"],
+    quote: "Panel try to not acknowedge something horrible an act said",
+  },
+  {
+    night: ["swamp"],
+    quote: "Danny Heller meth story",
   },
 ];
