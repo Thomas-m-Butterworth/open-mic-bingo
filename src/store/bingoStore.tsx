@@ -54,6 +54,10 @@ export const useBingoStore = create(
           animatingSquares[index] = isAnimating;
           return { animatingSquares };
         }),
+      previousBoard: [],
+      setPreviousBoard: (board) => set({ previousBoard: board }),
+      resetCount: 0,
+      setResetCount: (count: number) => set({ resetCount: count }),
     }),
     {
       name: "open-mic-bingo-storage",

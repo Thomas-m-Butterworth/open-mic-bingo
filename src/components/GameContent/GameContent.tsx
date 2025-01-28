@@ -22,13 +22,6 @@ export const ThemedHead = ({ night }: { night: NightTheme }) => {
   const metaTitle = `${promoter.name}'s ${title}`;
   const metaDescription = `${metaTitle} for ${night.promoter.night}`;
   const imagesSrc = `/images/${nightId}`;
-  console.log(
-    "%c themed head",
-    "color: lime",
-    { metaTitle },
-    { metaDescription },
-    { imagesSrc }
-  );
 
   return (
     <>
@@ -36,13 +29,11 @@ export const ThemedHead = ({ night }: { night: NightTheme }) => {
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
         <link rel="icon" href={`${imagesSrc}/icon.png`} />
-        {/* Open Graph metadata */}
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDescription} />
         <meta property="og:image" content={`${imagesSrc}/og-image.png`} />
         <meta property="og:url" content={promoter.website} />
         <meta property="og:site_name" content="Bingo Game" />
-        {/* Twitter metadata */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={metaTitle} />
         <meta name="twitter:description" content={metaDescription} />

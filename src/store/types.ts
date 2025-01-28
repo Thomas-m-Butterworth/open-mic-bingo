@@ -26,4 +26,8 @@ export interface BingoStore {
   animatingSquares: boolean[];
   setAnimatingSquares: (animating: boolean[]) => void;
   updateAnimatingSquare: (index: number, isAnimating: boolean) => void;
+  previousBoard: BingoType[];
+  setPreviousBoard: (board: BingoType[]) => void;
+  resetCount: number;
+  setResetCount: (count: number) => void;
 }
